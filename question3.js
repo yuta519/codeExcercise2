@@ -4,7 +4,7 @@
 
 let numList = [ 20, 40, -10, 5, 40, 5, 11]; // 40
 
-const largestNumber = (array) => {
+const largestNumber_1 = (array) => {
   // Write your logic here
   // Print the largest number inside the array // 40
   if (!Array.isArray(array)) {
@@ -13,4 +13,18 @@ const largestNumber = (array) => {
   return array.reduce((largest, num) => largest > num ? largest : num);
 }
 
-console.log(largestNumber(numList));
+const largestNumber_2 = (array) => {
+  // Write your logic here
+  // Print the largest number inside the array // 40
+  let largest = 0;
+  for (let i = 0; array.length > i; i++) {
+    if (array[i] > largest) {
+      largest = array[i];
+    }
+  }
+  return largest;
+}
+
+console.log(largestNumber_1(numList));
+console.log("============================");
+console.log(largestNumber_2(numList));
